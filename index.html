@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>鳥獣戯画じゃんけん</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- 紹介文 & 結果発表-->
+  <div class="context">
+    <p id="player" class="output">押忍！！</p>
+    <p id="computer" class="output">私たちは鳥獣戯画です</p>
+    <p id="resultMsg" class="output">三点先取の真剣勝負！</p>
+  </div>
+
+  <!-- スコア表 -->
+  <div id="score" class="score-board">point</div>
+
+  <!-- かえるとうさぎのジャンケン画像 -->
+  <div class="janken-container">
+    <div class="janken-img" id="janken">
+        <img src="img/kanfu-flog.png" alt="gu-flog" class="image play1" id="flog">
+      <img src="img/kanfu-rabbit.png" alt="gu-rabbit" class="image play2" id="rabbit">
+    </div>
+
+    <!-- スタートボタン -->
+    <button id='start-btn' class="start">勝負！</button>
+
+    <!-- ジャンケンボタン -->
+    <div class="btn" id="janBtn">
+      <input type="image" src="img/gu.png" onclick="rsp(0);" id="gu">
+      <input type="image" src="img/choki.png" onclick="rsp(1);" id="choki">
+      <input type="image" src="img/pa.png" onclick="rsp(2);" id="pa">
+    </div>
+  </div>
+
+  <!-- jQueryをCDNで読み込む -->
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <!-- JavaScriptファイルを読み込む -->
+  <script src="js/main.js"></script>
+</body>
+</html>
